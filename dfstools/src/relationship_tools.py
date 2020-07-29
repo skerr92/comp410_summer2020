@@ -19,7 +19,7 @@ def find_similar_data(current_table, current_col, dataframe_dict):
 def search_by_name(df_list, rel_dict):
     # start by iterating through the table and columns once
     for table in df_list:
-        print('+' + table)
+        # print('+' + table)
         for col in df_list[table].columns:
 
             # after getting to the first column, we need to start working through the data again
@@ -30,7 +30,7 @@ def search_by_name(df_list, rel_dict):
                 # given that that the tables are not the same table, we can move forward.
 
                 if tbl != table:
-                    print('-' + tbl)
+                    # print('-' + tbl)
                     # delineation is made to show we are working within different parts of the
                     # data to ensure no overlap is done between identical tables.
 
@@ -62,7 +62,7 @@ def search_by_name(df_list, rel_dict):
                             relationship = '.'.join([table, cln])
                             rel_dict[tbl][cln]['relationships'].append({relationship: {}})
 
-                            print(' ' + col)
+                            # print(' ' + col)
                             # We print the column only when it exists in a relationship that should be added.
 
 
